@@ -25,4 +25,18 @@ preBtn.addEventListener('click', () => {
   sliders.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 });
+sliders.addEventListener('transitionend', () => {
+    if (sliderImages[counter].id ==='lastclone') {
+        sliders.style.transition = "none";
+        counter = sliderImages.length = -2;
+        sliderImages.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    
+    }
+    if (sliderImages[counter].id ==='firstclone') {
+        sliders.style.transition = "none";
+        counter = sliderImages - counter;
+        sliderImages.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
+    }
+
+});
