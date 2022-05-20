@@ -13,6 +13,7 @@ sliders.style.transform = "translateX('  + (-size * counter) + 'px)";
 
 //buttons  
 nextBtn.addEventListener('click',() => {
+if (counter >= sliderImages.length -1) return;
   sliders.style.transition ="transform 0.8s ease-in-out";
   counter++;
   sliders.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -20,6 +21,7 @@ nextBtn.addEventListener('click',() => {
 });
 
 preBtn.addEventListener('click', () => {
+    if (counter <= 0) return; 
   sliders.style.transition ="transform 0.8s ease-in-out";
   counter--;
   sliders.style.transform = 'translateX(' + (-size * counter) + 'px)';
